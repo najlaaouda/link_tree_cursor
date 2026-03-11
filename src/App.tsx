@@ -39,16 +39,6 @@ class ErrorBoundary extends Component<
           >
             {this.state.error.message}
           </pre>
-          <pre
-            style={{
-              whiteSpace: 'pre-wrap',
-              marginTop: 8,
-              fontSize: 12,
-              color: '#666',
-            }}
-          >
-            {this.state.error.stack}
-          </pre>
         </div>
       );
     }
@@ -56,11 +46,13 @@ class ErrorBoundary extends Component<
   }
 }
 
+const basename = import.meta.env.BASE_URL.replace(/\/$/, '');
+
 export default function App() {
   return (
     <ErrorBoundary>
       <BuilderProvider>
-        <BrowserRouter>
+        <BrowserRouter basename={basename}>
           <Routes>
             <Route path="/" element={<TemplateGallery />} />
             <Route path="/builder" element={<PageBuilder />} />
