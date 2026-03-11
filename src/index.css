@@ -27,13 +27,6 @@
   --color-surface-800: #1e293b;
   --color-surface-900: #0f172a;
   --color-surface-950: #020617;
-
-  --color-accent-coral: #ff6b6b;
-  --color-accent-amber: #f59e0b;
-  --color-accent-emerald: #10b981;
-  --color-accent-violet: #8b5cf6;
-  --color-accent-sky: #0ea5e9;
-  --color-accent-rose: #f43f5e;
 }
 
 * {
@@ -43,11 +36,11 @@
 }
 
 body {
-  font-family: var(--font-sans);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: var(--color-surface-50);
-  color: var(--color-surface-900);
+  background: #f8fafc;
+  color: #0f172a;
 }
 
 .scrollbar-thin::-webkit-scrollbar {
@@ -57,11 +50,8 @@ body {
   background: transparent;
 }
 .scrollbar-thin::-webkit-scrollbar-thumb {
-  background: var(--color-surface-300);
+  background: #cbd5e1;
   border-radius: 3px;
-}
-.scrollbar-thin::-webkit-scrollbar-thumb:hover {
-  background: var(--color-surface-400);
 }
 
 .drag-overlay {
@@ -76,7 +66,7 @@ body {
 }
 
 .animate-fade-in {
-  animation: fadeIn 0.3s ease-out forwards;
+  animation: fadeIn 0.3s ease-out both;
 }
 
 @keyframes slideUp {
@@ -85,7 +75,7 @@ body {
 }
 
 .animate-slide-up {
-  animation: slideUp 0.4s ease-out forwards;
+  animation: slideUp 0.4s ease-out both;
 }
 
 @keyframes scaleIn {
@@ -94,5 +84,5 @@ body {
 }
 
 .animate-scale-in {
-  animation: scaleIn 0.3s ease-out forwards;
+  animation: scaleIn 0.3s ease-out both;
 }
